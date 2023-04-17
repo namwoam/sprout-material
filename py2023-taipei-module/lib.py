@@ -6,3 +6,5 @@ def drawSquare(size=3):
             print("="*size)
         else:
             print("="+" "*(size-2)+"=")
+
+pi = 20
