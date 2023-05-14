@@ -14674,7 +14674,8 @@ div.jp-OutputPrompt {
 <h1 id="Outline">Outline<a class="anchor-link" href="#Outline">&#182;</a></h1><ul>
 <li>Internet Basics</li>
 <li>Flask Introduction</li>
-<li>Path &amp; Query Parameters</li>
+<li>HTML</li>
+<li>Flask Cont.</li>
 <li>Template Response</li>
 <li>SQL Database</li>
 <li>Request</li>
@@ -14821,6 +14822,460 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><img src="./image/09.png" alt="" /></p>
 <p><a href="https://statisticsanddata.org/data/most-popular-backend-frameworks-2012-2023/">source</a></p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Practice">Practice<a class="anchor-link" href="#Practice">&#182;</a></h2><p>找到藏在 <a href="https://tw-csie-sprout.github.io/py2023/speaker">https://tw-csie-sprout.github.io/py2023/speaker</a> 中的祕密。</p>
+<p>格式為: SPROUT{P0_XXXXXXXXXX}</p>
+
+</div>
+</div>
+</div>
+</div></section></section><section ><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Flask-Introduction">Flask Introduction<a class="anchor-link" href="#Flask-Introduction">&#182;</a></h1>
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Before-we-start">Before we start<a class="anchor-link" href="#Before-we-start">&#182;</a></h2><ol>
+<li><code>pip install flask</code></li>
+<li>準備一個獨立的資料夾裝所有檔案</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Hello-Sprout!">Hello Sprout!<a class="anchor-link" href="#Hello-Sprout!">&#182;</a></h2><p><a href="https://github.com/namwoam/sprout-material/blob/main/py2023-taipei-flask/src/example-1.py">https://github.com/namwoam/sprout-material/blob/main/py2023-taipei-flask/src/example-1.py</a></p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Initialize">Initialize<a class="anchor-link" href="#Initialize">&#182;</a></h3><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Define-route-and-view">Define route and view<a class="anchor-link" href="#Define-route-and-view">&#182;</a></h3><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello_sprout</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">&quot;Hello, Sprout!&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Run-the-app!">Run the app!<a class="anchor-link" href="#Run-the-app!">&#182;</a></h3><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Execution">Execution<a class="anchor-link" href="#Execution">&#182;</a></h3><ol>
+<li><p>設定環境變數。</p>
+<ul>
+<li>Windows cmd: <code>set FLASK_APP=example-1</code></li>
+<li>Windows Powershell: <code>$env:FLASK_APP = &quot;example-1&quot;</code></li>
+<li>Mac/Linux: <code>export FLASK_APP=example-1</code></li>
+</ul>
+</li>
+<li><p>執行<code>flask run</code></p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="./image/10.png" alt="" /></p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Practice">Practice<a class="anchor-link" href="#Practice">&#182;</a></h2><ol>
+<li>讓伺服器顯示自己的名字。</li>
+<li>執行的時候使用<code>app.run(host=&quot;0.0.0.0&quot;)</code>。</li>
+<li>查詢自己的 ip address <a href="https://support.google.com/websearch/answer/1696588">link</a></li>
+</ol>
+
+</div>
+</div>
+</div>
+</div></section></section><section ><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="HTML:-HyperText-Markup-Language">HTML: HyperText Markup Language<a class="anchor-link" href="#HTML:-HyperText-Markup-Language">&#182;</a></h1>
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="I-want-to-have-structure-on-my-website!">I want to have structure on my website!<a class="anchor-link" href="#I-want-to-have-structure-on-my-website!">&#182;</a></h2><p>以資芽官網為例</p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="./image/12.png" alt="" /></p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="HTML-Elements">HTML Elements<a class="anchor-link" href="#HTML-Elements">&#182;</a></h2><p><img src="./image/11.png" alt="" /></p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Simple-Introduction">Simple Introduction<a class="anchor-link" href="#Simple-Introduction">&#182;</a></h3><ol>
+<li><code>&lt;h1&gt;Title&lt;/h1&gt;</code> n=1...5</li>
+<li><code>&lt;p&gt;Text&lt;/p&gt;</code></li>
+<li>Table</li>
+</ol>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Company<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Contact<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Country<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Alfreds Futterkiste<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Maria Anders<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Germany<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Centro comercial Moctezuma<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Francisco Chang<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Mexico<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Simple-Introduction-Cont.">Simple Introduction Cont.<a class="anchor-link" href="#Simple-Introduction-Cont.">&#182;</a></h3><ol start="4">
+<li><code>&lt;img src=&quot;/link/to/image.extension&quot;&gt;</code></li>
+<li><code>&lt;h1 style=&quot;color:red;&quot;&gt;Red Title!&lt;/h1&gt;</code></li>
+</ol>
+<p>For more information, read: <a href="https://www.w3schools.com/html/default.asp">link</a></p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Practice">Practice<a class="anchor-link" href="#Practice">&#182;</a></h2><ol>
+<li>讓伺服器自己的名字。</li>
+<li>回傳最高級的標題，字體顏色為藍色。</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div></section></section><section ><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Flask-Cont.">Flask Cont.<a class="anchor-link" href="#Flask-Cont.">&#182;</a></h1>
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Route-&amp;-View">Route &amp; View<a class="anchor-link" href="#Route-&amp;-View">&#182;</a></h2><p><img src="./image/15.png" alt="" />
+<img src="./image/14.png" alt="" />
+<img src="./image/13.png" alt="" /></p>
+
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>網站上可以有很多頁面(view)，可以通過不同路由(route)存取</p>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Hello-Sprout!-2.0">Hello Sprout! 2.0<a class="anchor-link" href="#Hello-Sprout!-2.0">&#182;</a></h2><p><a href="https://github.com/namwoam/sprout-material/blob/main/py2023-taipei-flask/src/example-2.py">https://github.com/namwoam/sprout-material/blob/main/py2023-taipei-flask/src/example-2.py</a></p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Different-Routes">Different Routes<a class="anchor-link" href="#Different-Routes">&#182;</a></h2><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/location&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">location</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;&lt;iframe src=&quot;https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.4313908491335!2d121.53896767367566!3d25.01943013888124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa2669686ea5%3A0x23428906fb6d9683!2z5Y-w5aSn6LOH6KiK5bel56iL6aSo77yI5b6355Sw6aSo77yJ!5e0!3m2!1sen!2stw!4v1684048829466!5m2!1sen!2stw&quot; width=&quot;600&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot; referrerpolicy=&quot;no-referrer-when-downgrade&quot;&gt;&lt;/iframe&gt;&#39;</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/price&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">price</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">&quot;&lt;p&gt;兩個階段都1700&lt;/p&gt;&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Dynamic-Routes">Dynamic Routes<a class="anchor-link" href="#Dynamic-Routes">&#182;</a></h2><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/student/&lt;studentName&gt;&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello_student</span><span class="p">(</span><span class="n">studentName</span><span class="p">):</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&lt;h1&gt;Hello, </span><span class="si">{</span><span class="n">studentName</span><span class="si">}</span><span class="s2">!&lt;/h1&gt;&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="HTTP-parameters">HTTP parameters<a class="anchor-link" href="#HTTP-parameters">&#182;</a></h2><div class="highlight"><pre><span></span><span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;bingchilling&quot;</span>
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/secret&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">getSecret</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">inputPassword</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;password&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">password</span> <span class="o">!=</span> <span class="n">inputPassword</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Password incorrect&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s2">&quot;&lt;h1&gt;我的房子還蠻大的&lt;/h1&gt;&quot;</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;403 Forbidden : </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="mi">403</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><code>http://{app.host}:{app.port}/secret?password=bingchilling</code></p>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="HTTP-Protocols">HTTP Protocols<a class="anchor-link" href="#HTTP-Protocols">&#182;</a></h2><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/secret&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">getSecret</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">inputPassword</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;password&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">password</span> <span class="o">!=</span> <span class="n">inputPassword</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Password incorrect&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s2">&quot;&lt;h1&gt;我的房子還蠻大的&lt;/h1&gt;&quot;</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;403 Forbidden : </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="mi">403</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="./image/16.png" alt="" /></p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Status-Code">Status Code<a class="anchor-link" href="#Status-Code">&#182;</a></h3><ul>
+<li>200 -&gt; OK</li>
+<li>403 -&gt; Forbidden</li>
+<li>404 -&gt; Not Found</li>
+<li>500 -&gt; Internal Server Error</li>
+</ul>
+<p>More information: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#server_error_responses">link</a></p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Redirect">Redirect<a class="anchor-link" href="#Redirect">&#182;</a></h2><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/rick&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">rickroll</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s2">&quot;https://www.youtube.com/watch?v=dQw4w9WgXcQ&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Practice">Practice<a class="anchor-link" href="#Practice">&#182;</a></h2><ol>
+<li>建立一個新的 route <code>traffic</code>。</li>
+<li>顯示所有頁面被訪問的次數。</li>
+</ol>
 
 </div>
 </div>
