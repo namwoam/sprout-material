@@ -14678,6 +14678,7 @@ div.jp-OutputPrompt {
 <li>Flask Cont.</li>
 <li>Template Response</li>
 <li>Request</li>
+<li>Deploy</li>
 <li>Additional Information</li>
 </ul>
 
@@ -15446,7 +15447,572 @@ div.jp-OutputPrompt {
 </div>
 </div>
 </div>
-</div></div></section></section>
+</div></div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Practice">Practice<a class="anchor-link" href="#Practice">&#182;</a></h2><ol>
+<li>下載臺大科系資料 <a href="https://github.com/namwoam/sprout-material/blob/main/py2023-taipei-flask/src/dpt_code.xls">https://github.com/namwoam/sprout-material/blob/main/py2023-taipei-flask/src/dpt_code.xls</a></li>
+<li>參考範例程式碼 <a href="https://github.com/namwoam/sprout-material/blob/main/py2023-taipei-flask/src/example-4.py">https://github.com/namwoam/sprout-material/blob/main/py2023-taipei-flask/src/example-4.py</a></li>
+<li>安裝套件 <code>pip install xlrd</code></li>
+<li>實做函數 <code>department()</code> 中查詢科系資料的部份。</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div></section></section><section ><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Request">Request<a class="anchor-link" href="#Request">&#182;</a></h1>
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Before-we-start">Before we start<a class="anchor-link" href="#Before-we-start">&#182;</a></h2><ol>
+<li><code>pip install requests</code></li>
+</ol>
+
+</div>
+</div>
+</div>
+</div></section><section ><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://web.ntnu.edu.tw/~algo/&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">status_code</span> <span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>200 &lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;zh-Hant&#34;&gt;&lt;head&gt;&lt;meta charset=&#34;UTF-8&#34;&gt;&lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0, minimum-scale=1.0&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;index.css&#34;&gt;
+&lt;title&gt;æ¼ç®æ³ç­è¨&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class=&#34;b&#34;&gt;
+&lt;div class=&#34;t&#34;&gt;Search&lt;/div&gt;
+&lt;div class=&#34;l&#34;&gt;
+&lt;script&gt;function search(e) {if (e.keyCode == 13) {window.location.assign(&#39;https://www.google.com/search?q=site:web.ntnu.edu.tw/~algo/+&#39; + document.getElementById(&#34;input&#34;).value.replace(/\s/gi,&#39;+&#39;)); return false;}}&lt;/script&gt;
+&lt;input id=&#34;input&#34; type=&#34;text&#34; maxlength=&#34;64&#34; value=&#34;&#34; onkeypress=&#34;return search(event)&#34;&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&#34;b&#34;&gt;
+&lt;div class=&#34;t&#34;&gt;About&lt;/div&gt;
+&lt;div class=&#34;l&#34;&gt;
+&lt;a href=&#34;about.html&#34;&gt;About&lt;/a&gt;&lt;br&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&#34;b&#34;&gt;
+&lt;div class=&#34;t&#34;&gt;Algorithm&lt;/div&gt;
+&lt;div class=&#34;i&#34;&gt;&lt;img src=&#34;indexAlgorithm.png&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;l&#34;&gt;
+&lt;a href=&#34;Algorithm.html&#34;&gt;Algorithm&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;AlgorithmDesign.html&#34;&gt;Algorithm Design&lt;/a&gt;&lt;br&gt;
+â£ &lt;a href=&#34;Backtracking.html&#34;&gt;Backtracking&lt;/a&gt;&lt;br&gt;
+â£ &lt;a href=&#34;DynamicProgramming.html&#34;&gt;Dynamic Programming&lt;/a&gt;&lt;br&gt;
+â£ &lt;a href=&#34;OptimalPathProblem.html&#34;&gt;ð£&lt;/a&gt;
+â£ &lt;a href=&#34;KnapsackProblem.html&#34;&gt;ð¤&lt;/a&gt;
+â£ &lt;a href=&#34;LocationAllocationProblem.html&#34;&gt;ð¥&lt;/a&gt;
+â£ &lt;a href=&#34;MaximumSubarrayProblem.html&#34;&gt;ð¦&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;AlgorithmAnalysis.html&#34;&gt;Algorithm Analysis&lt;/a&gt;&lt;br&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&#34;b&#34;&gt;
+&lt;div class=&#34;t&#34;&gt;Data Structure&lt;/div&gt;
+&lt;div class=&#34;i&#34;&gt;&lt;img src=&#34;indexDataStructure.png&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;l&#34;&gt;
+&lt;a href=&#34;Data.html&#34;&gt;Data&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Set.html&#34;&gt;Set&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Ordering2.html&#34;&gt;Ordering&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Sequence2.html&#34;&gt;Sequence&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Position.html&#34;&gt;Position&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Region.html&#34;&gt;Region&lt;/a&gt;&lt;br&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&#34;b&#34;&gt;
+&lt;div class=&#34;t&#34;&gt;Algorithmic Graph Theory&lt;/div&gt;
+&lt;div class=&#34;i&#34;&gt;&lt;img src=&#34;indexAlgorithmicGraphTheory.png&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;l&#34;&gt;
+&lt;a href=&#34;Graph.html&#34;&gt;Graph&lt;/a&gt; â£ &lt;a href=&#34;Graph2.html&#34;&gt;ð¤&lt;/a&gt; â£ &lt;a href=&#34;GraphSpectrum.html&#34;&gt;ð¥&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Tree.html&#34;&gt;Tree&lt;/a&gt; â£ &lt;a href=&#34;Tree2.html&#34;&gt;ð¤&lt;/a&gt; â£ &lt;a href=&#34;BinaryTree.html&#34;&gt;ð¥&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;DirectedAcyclicGraph.html&#34;&gt;Directed Acyclic Graph&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;RootedTree.html&#34;&gt;Rooted Tree&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;ConnectedGraph.html&#34;&gt;Connected Graph&lt;/a&gt; â£ &lt;a href=&#34;ConnectedComponent.html&#34;&gt;ð¤&lt;/a&gt; â£ &lt;a href=&#34;GraphDecomposition.html&#34;&gt;ð¥&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;IsomorphicGraph.html&#34;&gt;Isomorphic Graph&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;CompleteGraph.html&#34;&gt;Complete Graph&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;PlanarGraph.html&#34;&gt;Planar Graph&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;ExpanderGraph.html&#34;&gt;Expander Graph&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;BipartiteGraph.html&#34;&gt;Bipartite Graph&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;ChordalGraph.html&#34;&gt;Chordal Graph&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;PerfectGraph.html&#34;&gt;Perfect Graph&lt;/a&gt;&lt;br&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&#34;b&#34;&gt;
+&lt;div class=&#34;t&#34;&gt;Combinatorial Optimization&lt;/div&gt;
+&lt;div class=&#34;i&#34;&gt;&lt;img src=&#34;indexCombinatorialOptimization.png&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;l&#34;&gt;
+&lt;a href=&#34;Path.html&#34;&gt;Path&lt;/a&gt; â£ &lt;a href=&#34;Path2.html&#34;&gt;ð¤&lt;/a&gt; â£ &lt;a href=&#34;Path3.html&#34;&gt;ð¥&lt;/a&gt; â£ &lt;a href=&#34;Path4.html&#34;&gt;ð¦&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;SpanningTree.html&#34;&gt;Spanning Tree&lt;/a&gt; â£ &lt;a href=&#34;SpanningTree2.html&#34;&gt;ð¤&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Cycle.html&#34;&gt;Cycle&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Flow.html&#34;&gt;Flow&lt;/a&gt; â£ &lt;a href=&#34;Flow2.html&#34;&gt;ð¤&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Cut.html&#34;&gt;Cut&lt;/a&gt; â£ &lt;a href=&#34;Cut2.html&#34;&gt;ð¤&lt;/a&gt; â£ &lt;a href=&#34;Cut3.html&#34;&gt;ð¥&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Matching.html&#34;&gt;Matching&lt;/a&gt; â£ &lt;a href=&#34;Matching2.html&#34;&gt;ð¤&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Tour.html&#34;&gt;Tour&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Scheduling.html&#34;&gt;Scheduling&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Matroid.html&#34;&gt;Matroid&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Domination.html&#34;&gt;Domination&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Coloring.html&#34;&gt;Coloring&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Labeling.html&#34;&gt;Labeling&lt;/a&gt;&lt;br&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&#34;b&#34;&gt;
+&lt;div class=&#34;t&#34;&gt;Computational Number Theory&lt;/div&gt;
+&lt;div class=&#34;i&#34;&gt;&lt;img src=&#34;indexComputationalNumberTheory.png&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;l&#34;&gt;
+&lt;a href=&#34;Number.html&#34;&gt;Number&lt;/a&gt; â£ &lt;a href=&#34;Bit.html&#34;&gt;Bit&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Function.html&#34;&gt;Function&lt;/a&gt; â£ &lt;a href=&#34;Operation.html&#34;&gt;Operation&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Divisor.html&#34;&gt;Divisor&lt;/a&gt; â£ &lt;a href=&#34;Partition.html&#34;&gt;Partition&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Prime.html&#34;&gt;Prime&lt;/a&gt; â£ &lt;a href=&#34;Factorization.html&#34;&gt;Factorization&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Residue.html&#34;&gt;Residue&lt;/a&gt; â£ &lt;a href=&#34;FiniteField.html&#34;&gt;Finite Field&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Fraction.html&#34;&gt;Fraction&lt;/a&gt; â£ &lt;a href=&#34;Lattice.html&#34;&gt;Lattice&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Permutation.html&#34;&gt;Permutation&lt;/a&gt; â£ &lt;a href=&#34;Count.html&#34;&gt;Count&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Ordering.html&#34;&gt;Ordering&lt;/a&gt; â£ &lt;a href=&#34;Sort.html&#34;&gt;Sort&lt;/a&gt;&lt;br&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&#34;b&#34;&gt;
+&lt;div class=&#34;t&#34;&gt;Analytic Number Theory&lt;/div&gt;
+&lt;div class=&#34;i&#34;&gt;&lt;img src=&#34;indexAnalyticNumberTheory.png&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;l&#34;&gt;
+&lt;a href=&#34;Sequence.html&#34;&gt;Sequence&lt;/a&gt; â£ &lt;a href=&#34;Convolution.html&#34;&gt;Convolution&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;ArithmeticFunction.html&#34;&gt;Arithmetic Function&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Recurrence.html&#34;&gt;Recurrence&lt;/a&gt; â£ &lt;a href=&#34;Filter.html&#34;&gt;Filter&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;IteratedFunction.html&#34;&gt;Iterated Function&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Polynomial.html&#34;&gt;Polynomial&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;PolynomialFunction.html&#34;&gt;Polynomial Function&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Series.html&#34;&gt;Series&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;ComplexFunction.html&#34;&gt;Complex Function&lt;/a&gt;&lt;br&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+
+&lt;div class=&#34;b&#34;&gt;
+&lt;div class=&#34;t&#34;&gt;Computational Geometry&lt;/div&gt;
+&lt;div class=&#34;i&#34;&gt;&lt;img src=&#34;indexComputationalGeometry.png&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;l&#34;&gt;
+&lt;a href=&#34;Point.html&#34;&gt;Point&lt;/a&gt; â£ &lt;a href=&#34;Point2.html&#34;&gt;ð¤&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Shape.html&#34;&gt;Shape&lt;/a&gt; â£ &lt;a href=&#34;Shape2.html&#34;&gt;ð¤&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Polygon.html&#34;&gt;Polygon&lt;/a&gt; â£ &lt;a href=&#34;Polygon2.html&#34;&gt;ð¤&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;ConvexHull.html&#34;&gt;Convex Hull&lt;/a&gt; â£ &lt;a href=&#34;ConvexHull2.html&#34;&gt;ð¤&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Triangulation.html&#34;&gt;Triangulation&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Neighbor.html&#34;&gt;Neighbor&lt;/a&gt;&lt;br&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&#34;b&#34;&gt;
+&lt;div class=&#34;t&#34;&gt;Discrete Differential Geometry&lt;/div&gt;
+&lt;div class=&#34;i&#34;&gt;&lt;img src=&#34;indexDiscreteDifferentialGeometry.png&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;l&#34;&gt;
+&lt;a href=&#34;Surface.html&#34;&gt;Surface&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;DifferentiableSurface.html&#34;&gt;Differentiable Surface&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;TopologicalSurface.html&#34;&gt;Topological Surface&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;MinimalSurface.html&#34;&gt;Minimal Surface&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;DevelopableSurface.html&#34;&gt;Developable Surface&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Geodesic.html&#34;&gt;Geodesic&lt;/a&gt;&lt;br&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&#34;b&#34;&gt;
+&lt;div class=&#34;t&#34;&gt;Numerical Analysis&lt;/div&gt;
+&lt;div class=&#34;i&#34;&gt;&lt;img src=&#34;indexNumericalAnalysis.png&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;l&#34;&gt;
+&lt;a href=&#34;Function3.html&#34;&gt;Function&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;RootFinding.html&#34;&gt;Root Finding&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Optimization.html&#34;&gt;Optimization&lt;/a&gt; â£ &lt;a href=&#34;MultivariateFunction.html&#34;&gt;ð¤&lt;/a&gt; â£ &lt;a href=&#34;ConvexOptimization.html&#34;&gt;ð¥&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Interpolation.html&#34;&gt;Interpolation&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Regression.html&#34;&gt;Regression&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Approximation.html&#34;&gt;Approximation&lt;/a&gt;&lt;br&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&#34;b&#34;&gt;
+&lt;div class=&#34;t&#34;&gt;Numerical Linear Algebra&lt;/div&gt;
+&lt;div class=&#34;i&#34;&gt;&lt;img src=&#34;indexNumericalLinearAlgebra.png&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;l&#34;&gt;
+&lt;a href=&#34;LinearFunction.html&#34;&gt;Linear Function&lt;/a&gt; â£ &lt;a href=&#34;LinearFunction2.html&#34;&gt;ð¤&lt;/a&gt; â£ &lt;a href=&#34;LinearFunction3.html&#34;&gt;ð¥&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;LinearEquation.html&#34;&gt;Linear Equation&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;LinearOptimization.html&#34;&gt;Linear Optimization&lt;/a&gt; â£ &lt;a href=&#34;LinearOptimization2.html&#34;&gt;ð¤&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;SparseLinearFunction.html&#34;&gt;Sparse Linear Function&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;SparseLinearEquation.html&#34;&gt;Sparse Linear Equation&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;SparseLinearOptimization.html&#34;&gt;Sparse Linear Optimization&lt;/a&gt;&lt;br&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&#34;b&#34;&gt;
+&lt;div class=&#34;t&#34;&gt;Engineering Mathematics&lt;/div&gt;
+&lt;div class=&#34;i&#34;&gt;&lt;img src=&#34;indexEngineeringMathematics.png&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;l&#34;&gt;
+&lt;a href=&#34;Number2.html&#34;&gt;Number&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Function2.html&#34;&gt;Function&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Wave.html&#34;&gt;Wave&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Spiral.html&#34;&gt;Spiral&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Function4.html&#34;&gt;Function&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;FunctionalEquation.html&#34;&gt;Functional Equation&lt;/a&gt;&lt;br&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&#34;b&#34;&gt;
+&lt;div class=&#34;t&#34;&gt;Discrete Mathematics&lt;/div&gt;
+&lt;div class=&#34;i&#34;&gt;&lt;img src=&#34;indexDiscreteMathematics.png&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;l&#34;&gt;
+&lt;a href=&#34;Logic.html&#34;&gt;Logic&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;ProgrammingLanguage.html&#34;&gt;Language&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Game.html&#34;&gt;Game&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Grid.html&#34;&gt;Grid&lt;/a&gt;&lt;br&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&#34;b&#34;&gt;
+&lt;div class=&#34;t&#34;&gt;Data Processing&lt;/div&gt;
+&lt;div class=&#34;i&#34;&gt;&lt;img src=&#34;indexDataProcessing.png&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;l&#34;&gt;
+&lt;a href=&#34;Data2.html&#34;&gt;Data&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Estimation.html&#34;&gt;Estimation&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Fitting.html&#34;&gt;Fitting&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Correlation.html&#34;&gt;Correlation&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Factoring.html&#34;&gt;Factoring&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Transformation.html&#34;&gt;Transformation&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Embedding.html&#34;&gt;Embedding&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Representation.html&#34;&gt;Representation&lt;/a&gt;&lt;br&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&#34;b&#34;&gt;
+&lt;div class=&#34;t&#34;&gt;Signal Processing&lt;/div&gt;
+&lt;div class=&#34;i&#34;&gt;&lt;img src=&#34;indexSignalProcessing.png&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;l&#34;&gt;
+&lt;a href=&#34;Signal.html&#34;&gt;Signal&lt;/a&gt; â£ &lt;a href=&#34;PeriodicSignal.html&#34;&gt;ð¤&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;State.html&#34;&gt;State&lt;/a&gt; â£ &lt;a href=&#34;HiddenMarkovModel.html&#34;&gt;ð¤&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;System.html&#34;&gt;System&lt;/a&gt; â£ &lt;a href=&#34;FunctionNetwork.html&#34;&gt;ð¤&lt;/a&gt;&lt;br&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&#34;b&#34;&gt;
+&lt;div class=&#34;t&#34;&gt;String Processing&lt;/div&gt;
+&lt;div class=&#34;i&#34;&gt;&lt;img src=&#34;indexStringProcessing.png&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;l&#34;&gt;
+&lt;a href=&#34;String.html&#34;&gt;String&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Substring.html&#34;&gt;Substring&lt;/a&gt; â£ &lt;a href=&#34;Substring2.html&#34;&gt;ð¤&lt;/a&gt; â£ &lt;a href=&#34;Substring3.html&#34;&gt;ð¥&lt;/a&gt; â£ &lt;a href=&#34;Substring4.html&#34;&gt;ð¦&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Subsequence.html&#34;&gt;Subsequence&lt;/a&gt; â£ &lt;a href=&#34;Subsequence2.html&#34;&gt;ð¤&lt;/a&gt; â£ &lt;a href=&#34;Subsequence3.html&#34;&gt;ð¥&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Palindrome.html&#34;&gt;Palindrome&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Language.html&#34;&gt;Language&lt;/a&gt;&lt;br&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&#34;b&#34;&gt;
+&lt;div class=&#34;t&#34;&gt;Coding Theory&lt;/div&gt;
+&lt;div class=&#34;i&#34;&gt;&lt;img src=&#34;indexCodingTheory.png&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;l&#34;&gt;
+&lt;a href=&#34;Code.html&#34;&gt;Code&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Compression.html&#34;&gt;Compression&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Correction.html&#34;&gt;Correction&lt;/a&gt; â£ &lt;a href=&#34;Correction2.html&#34;&gt;ð¤&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Encryption.html&#34;&gt;Encryption&lt;/a&gt; â£ &lt;a href=&#34;Encryption2.html&#34;&gt;ð¤&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Transmission.html&#34;&gt;Transmission&lt;/a&gt;&lt;br&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&#34;b&#34;&gt;
+&lt;div class=&#34;t&#34;&gt;Multimedia&lt;/div&gt;
+&lt;div class=&#34;i&#34;&gt;&lt;img src=&#34;indexMultimedia.png&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;l&#34;&gt;
+&lt;a href=&#34;Data3.html&#34;&gt;Data&lt;/a&gt; â£ &lt;a href=&#34;Sensor.html&#34;&gt;Sensor&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Text.html&#34;&gt;Text&lt;/a&gt; â£ &lt;a href=&#34;NaturalLanguage.html&#34;&gt;Language&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Audio.html&#34;&gt;Audio&lt;/a&gt; â£ &lt;a href=&#34;Sound.html&#34;&gt;Sound&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Image.html&#34;&gt;Image&lt;/a&gt; â£ &lt;a href=&#34;Color.html&#34;&gt;Color&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Model.html&#34;&gt;Model&lt;/a&gt; â£ &lt;a href=&#34;Simulation.html&#34;&gt;Simulation&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Graphics.html&#34;&gt;Graphics&lt;/a&gt; â£ &lt;a href=&#34;Animation.html&#34;&gt;Animation&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Camera.html&#34;&gt;Camera&lt;/a&gt; â£ &lt;a href=&#34;Vision.html&#34;&gt;Vision&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Glass.html&#34;&gt;Glass&lt;/a&gt; â£ &lt;a href=&#34;Motion.html&#34;&gt;Motion&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Robot.html&#34;&gt;Robot&lt;/a&gt; â£ &lt;a href=&#34;Perception.html&#34;&gt;Perception&lt;/a&gt;&lt;br&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&#34;b&#34;&gt;
+&lt;div class=&#34;t&#34;&gt;Interdisciplinarity&lt;/div&gt;
+&lt;div class=&#34;i&#34;&gt;&lt;img src=&#34;indexInterdisciplinarity.png&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;l&#34;&gt;
+&lt;a href=&#34;Computer.html&#34;&gt;Computer&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Math.html&#34;&gt;Math&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Physics.html&#34;&gt;Physics&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Biology.html&#34;&gt;Biology&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Medicine.html&#34;&gt;Medicine&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Geography.html&#34;&gt;Geography&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Sociology.html&#34;&gt;Sociology&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Engineering.html&#34;&gt;Engineering&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Art.html&#34;&gt;Art&lt;/a&gt;&lt;br&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&#34;b&#34;&gt;
+&lt;div class=&#34;t&#34;&gt;Development&lt;/div&gt;
+&lt;div class=&#34;l&#34;&gt;
+&lt;a href=&#34;Programming.html&#34;&gt;Programming&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;ProblemSolving.html&#34;&gt;Problem Solving&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Activity.html&#34;&gt;Activity&lt;/a&gt;&lt;br&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&#34;b&#34;&gt;
+&lt;div class=&#34;t&#34;&gt;Innovation&lt;/div&gt;
+&lt;div class=&#34;l&#34;&gt;
+&lt;a href=&#34;Science.html&#34;&gt;Science&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Technology.html&#34;&gt;Technology&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;Industry.html&#34;&gt;Industry&lt;/a&gt; â£ &lt;a href=&#34;Industry2.html&#34;&gt;ð¤&lt;/a&gt;&lt;br&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section></section><section ><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Deploy">Deploy<a class="anchor-link" href="#Deploy">&#182;</a></h1>
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="%E8%A9%A6%E8%A9%A6%E7%9C%8B%E7%94%A8%E4%B8%8D%E5%90%8C%E7%9A%84%E9%9B%BB%E8%85%A6%E9%80%A3%E6%8E%A5%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E7%B6%B2%E7%AB%99">&#35430;&#35430;&#30475;&#29992;&#19981;&#21516;&#30340;&#38651;&#33126;&#36899;&#25509;&#21040;&#33258;&#24049;&#30340;&#32178;&#31449;<a class="anchor-link" href="#%E8%A9%A6%E8%A9%A6%E7%9C%8B%E7%94%A8%E4%B8%8D%E5%90%8C%E7%9A%84%E9%9B%BB%E8%85%A6%E9%80%A3%E6%8E%A5%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E7%B6%B2%E7%AB%99">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="pythonanywhere">pythonanywhere<a class="anchor-link" href="#pythonanywhere">&#182;</a></h2><p><img src="./image/18.png" alt="" /></p>
+<p><a href="https://www.pythonanywhere.com/">https://www.pythonanywhere.com/</a></p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="./image/17.png" alt="" /></p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="./image/18.png" alt="" /></p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="./image/19.png" alt="" /></p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="./image/20.png" alt="" /></p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="./image/21.png" alt="" /></p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="./image/22.png" alt="" /></p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="./image/23.png" alt="" /></p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="./image/24.png" alt="" /></p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="./image/25.png" alt="" /></p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="./image/26.png" alt="" /></p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="%E7%B6%B2%E9%A0%81%E9%9D%9E%E5%B8%B8%E5%A5%BD">&#32178;&#38913;&#38750;&#24120;&#22909;<a class="anchor-link" href="#%E7%B6%B2%E9%A0%81%E9%9D%9E%E5%B8%B8%E5%A5%BD">&#182;</a></h2><p><img src="./image/27.png" alt="" /></p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="See-also:">See also:<a class="anchor-link" href="#See-also:">&#182;</a></h2><ul>
+<li><a href="https://help.pythonanywhere.com/pages/Flask/">https://help.pythonanywhere.com/pages/Flask/</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></section></section><section ><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Additional-Information">Additional Information<a class="anchor-link" href="#Additional-Information">&#182;</a></h1><ol>
+<li><p>SQL資料庫 <a href="https://flask-sqlalchemy.palletsprojects.com/en/2.x/">https://flask-sqlalchemy.palletsprojects.com/en/2.x/</a></p>
+</li>
+<li><p>Email發送 <a href="https://pythonhosted.org/Flask-Mail/">https://pythonhosted.org/Flask-Mail/</a></p>
+</li>
+<li><p>一堆酷東西 <a href="https://www.fullstackpython.com/flask-extensions-plug-ins-related-libraries.html">https://www.fullstackpython.com/flask-extensions-plug-ins-related-libraries.html</a></p>
+</li>
+<li><p>編教材時用的工具書 <a href="https://www.books.com.tw/products/0010793455?sloc=main">https://www.books.com.tw/products/0010793455?sloc=main</a></p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="The-sky-is-the-limit!!">The sky is the limit!!<a class="anchor-link" href="#The-sky-is-the-limit!!">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div></section></section>
 </div>
 </div>
 </body>
