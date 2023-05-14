@@ -1,4 +1,4 @@
-from lib import drawSquare , pi
-
-drawSquare(7)
-print(pi)
+try:
+    print(hello world)
+except SyntaxError:
+    print("error")

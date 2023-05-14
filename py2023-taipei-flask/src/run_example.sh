@@ -1,0 +1,1 @@
+uvicorn example-${1}:app --reload
