@@ -3,10 +3,12 @@ from flask import redirect, request
 
 app = Flask(__name__)
 password = "CHIPI-CHIPI-CHAPA-CHAPA"
-
+count = 0
 
 @app.route("/")
 def hello_maowman():
+    global count
+    count +=1
     return "<h1>Hello, Maowman!</h1>"
 
 
@@ -17,7 +19,7 @@ def dancing():
 
 @app.route("/who")
 def price():
-    return "<p>我是超級貓貓男<\p>"
+    return "<p>我是超級貓貓男 </p>"
 
 
 @app.route("/student/<studentName>")
@@ -38,7 +40,12 @@ def getSecret():
 
 @app.route("/chipi")
 def rickroll():
-    return redirect("https://www.youtube.com/watch?v=wh9QLjk3M2k")
+    return redirect("https://www.youtube.com/watch?v=1d9Gebi9Kus")
+
+@app.route("/traffic")
+def traffic():
+    global count
+    return str(count)
 
 
 if __name__ == "__main__":
