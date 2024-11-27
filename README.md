@@ -6,7 +6,7 @@ For additional information, please refer to https://sprout.tw/spt/
 
 ## Courses
 ### Fall 2024
-- [Git&GitHub](https://namwoam.github.io/sprout-material/pd2024-git/slide.slides.html#/) (IM1003 Programming Design Workshop)
+- [Git&GitHub](https://namwoam.github.io/sprout-material/pd2024-git/slide.slides.html#/) (IM1003 Programming Design TA Workshop)
 ### Spring 2024
 - [Web Programming](https://namwoam.github.io/sprout-material/py2024-taipei-flask/slide.slides.html#/)
 - [Computer Vision](https://namwoam.github.io/sprout-material/py2024-taipei-computer_vision/slide.slides.html#/)
