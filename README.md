@@ -5,6 +5,8 @@ This is a repository where I put my teaching materials of the Python classes for
 For additional information, please refer to https://sprout.tw/spt/
 
 ## Courses
+### Fall 2024
+- [Git&GitHub](https://namwoam.github.io/sprout-material/pd2024-git/slide.slides.html#/) (IM1003 Programming Design Workshop)
 ### Spring 2024
 - [Web Programming](https://namwoam.github.io/sprout-material/py2024-taipei-flask/slide.slides.html#/)
 - [Computer Vision](https://namwoam.github.io/sprout-material/py2024-taipei-computer_vision/slide.slides.html#/)
@@ -12,3 +14,4 @@ For additional information, please refer to https://sprout.tw/spt/
 - [Web Programming](https://namwoam.github.io/sprout-material/py2023-taipei-flask/slide.slides.html#/)
 - [Module](https://namwoam.github.io/sprout-material/py2023-taipei-module/slide.slides.html#/)
 - [Coding Style](https://namwoam.github.io/sprout-material/py2023-taipei-coding_style/slide.slides.html#/)
+
