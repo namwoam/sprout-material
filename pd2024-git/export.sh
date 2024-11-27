@@ -1,0 +1,1 @@
+poetry run jupyter nbconvert 'slide.ipynb' --to slides --post serve --TagRemovePreprocessor.remove_input_tags={\"no-input\"}

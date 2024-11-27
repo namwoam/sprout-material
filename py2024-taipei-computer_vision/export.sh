@@ -1,2 +1,2 @@
-jupyter nbconvert 'slide.ipynb' --to slides --post serve
+poetry run jupyter nbconvert 'slide.ipynb' --to slides --post serve
 

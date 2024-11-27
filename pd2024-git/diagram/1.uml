@@ -1,0 +1,32 @@
+@startuml
+start
+:閱讀題目;
+:撰寫第一版程式;
+:第 3,5,8 筆測資 WA;
+fork
+: 修改 a 條件;
+: 第二版程式;
+: 第 3 筆測資 AC;
+fork again
+: 修改 b 條件;
+: 第三版程式;
+: 第 5 筆測資 AC 但多了第 7 筆 WA;
+fork again
+: 修改 c 條件;
+: 第四版程式;
+: 第 3,8 筆測資 AC 但第 10 筆 TLE;
+    fork
+    : 修改 a 條件;
+    : 第五版程式;
+    : 第 5,8 筆 AC;
+    fork again
+    : 修改 b 條件;
+    : 第六版程式;
+    : 全部測資 RE;
+    end fork
+end fork
+: 寫到自暴自棄;
+: 第七版程式;
+: 全部測資 AC;
+end
+@enduml
